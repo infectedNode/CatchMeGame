@@ -1,0 +1,39 @@
+.play {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(152, 204, 209);
+    font-size: 0;
+    display: none;
+}
+
+.play.show {
+    display: block;
+}
+
+.play .row {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 25%;
+}
+
+.play .row .block {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 12.5%;
+    background-color: transparent;
+}
+
+.play .row .block.correct {
+    background-color: rgb(104, 104, 104);
+    cursor: pointer;
+}
+
+.play .row .block.wrong {
+    background-color: rgb(155, 38, 38);
+}
