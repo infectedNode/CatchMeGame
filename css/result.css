@@ -14,3 +14,75 @@
 .result.show {
     display: block;
 }
+
+.result .card {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;
+    width: 80%;
+    height: 65%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.result .card .over {
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(44, 44, 44);
+    font-weight: bolder;
+}
+
+.result .card .score {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    color: rgb(44, 44, 44);
+    font-size: 2rem;
+}
+
+.result .card .buttons {
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    font-size: 0;
+}
+
+.result .card .buttons .block {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 60px;
+    position: relative;
+}
+
+.result .card .buttons .block .button {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(128, 44, 44);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.result .card .buttons .block .button p {
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}

@@ -7,10 +7,6 @@
     background-color: rgb(152, 204, 209);
 }
 
-.home.hide {
-    display: none;
-}
-
 .home .start {
     position: absolute;
     top: 50%;

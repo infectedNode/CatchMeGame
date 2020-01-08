@@ -1,5 +1,10 @@
 var score = 0;
 
+function showResult(result) {
+    $('.result .card .score').html(`Score : ${result}`);
+    $('.result').addClass('show');
+}
+
 function gameStart() {
 
     //User Score
@@ -48,24 +53,22 @@ function gameStart() {
                 timeoutID = setTimeout(timeout, 500);   //timelimit = 0.5sec when score > 14 (15,16...)
             }
         } else {
-            $('.result').addClass('show');
+            showResult(score);
 
             $(`.play .row #${blockID}`).addClass('wrong');
 
-            console.log('NOT Matched !  GAME OVER...');
-            console.log(`Player Score: ${score}`);
+            // console.log('NOT Matched !  GAME OVER...');
         }
     }
 
     //End Game when Timeout
     function timeout() {
-        $('.result').addClass('show');
+        showResult(score);
 
         $('.play .row .block').removeClass('correct');
         $(`.play .row #${timeoutBlockID}`).addClass('wrong');
         
-        console.log('TIME OUT !  GAME OVER...');
-        console.log(`Player Score: ${score}`);
+        // console.log('TIME OUT !  GAME OVER...');
     }
 
     // Handle click events
@@ -77,12 +80,21 @@ function gameStart() {
 }
 
 
-// When clicked on the start button...
-$('.home .start').click(function(){
-    $('.home').addClass('hide');
-    $('.play').addClass('show');
-    $('.play .row .block').removeClass('correct');
-    $('.play .row .block').removeClass('wrong');
+
+$('.result .card .buttons .block .retry').click(function(){
+    location.reload(true);
+    // document.documentElement.requestFullscreen();
+    // document.body.requestFullscreen();
+});
+
+$('.result .card .buttons .block .quit').click(function(){
+    let url = "/index.html";
+    window.location.href = url; 
+});
+
+$(document).ready(function(){
+    // document.documentElement.requestFullscreen();
+    // document.body.requestFullscreen();
     gameStart();
 });
 

@@ -6,11 +6,6 @@
     position: relative;
     background-color: rgb(152, 204, 209);
     font-size: 0;
-    display: none;
-}
-
-.play.show {
-    display: block;
 }
 
 .play .row {
@@ -36,4 +31,14 @@
 
 .play .row .block.wrong {
     background-color: rgb(155, 38, 38);
+}
+
+@media(max-width: 450px) {
+    .play {
+        height: 93vh;
+    }
+    .play .row .block {
+        height: 50%;
+        width: 25%;
+    }
 }
