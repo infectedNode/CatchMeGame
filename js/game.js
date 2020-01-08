@@ -80,12 +80,12 @@ function gameStart() {
     // Progress of remaining time
     function progress(time) {
         let width = 100;
-        intervalID = setInterval(move, time/100);
+        intervalID = setInterval(move, time/200);
         function move() {
             if(width <= 0) {
                 clearInterval(intervalID);
             } else {
-                width--;
+                width -= .5;
                 $('.play .progress .current').css('width', `${width}%`);
             }
         }
@@ -100,7 +100,29 @@ function gameStart() {
     });
 }
 
-
+function countdown() {
+    let count = 4;
+    let text = '';
+    $('.countdown .count').css('font-size', '0');
+    let intervalID = setInterval(go, 1000);
+    function go() {
+        if(count <= 0) {
+            clearInterval(intervalID);
+            $('.countdown .count').html('');
+            $('.countdown').addClass('hide');
+            gameStart();
+        } else {
+            count--;
+            if(count == 0) {
+                text = 'GO!';
+            } else {
+                text = `${count}`;
+            }
+            $('.countdown .count').html(text).animate({fontSize: '8rem'},500);
+            $('.countdown .count').animate({fontSize: '0'},500);
+        }
+    }
+}
 
 $('.result .card .buttons .block .retry').click(function(){
     location.reload(true);
@@ -116,7 +138,7 @@ $('.result .card .buttons .block .quit').click(function(){
 $(document).ready(function(){
     // document.documentElement.requestFullscreen();
     // document.body.requestFullscreen();
-    gameStart();
+    countdown();
 });
 
 

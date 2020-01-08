@@ -1,0 +1,27 @@
+.countdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 5;
+}
+
+.countdown.hide {
+    display: none;
+}
+
+.countdown .count {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(32, 32, 32);
+    text-shadow: 0 3px 6px rgb(36, 36, 36);
+    backface-visibility: hidden;
+}

@@ -6,6 +6,7 @@
     position: relative;
     background-color: rgb(152, 204, 209);
     font-size: 0;
+
 }
 
 .play .progress {
@@ -42,7 +43,7 @@
 }
 
 .play .row .block.correct {
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(36, 36, 36);
     cursor: pointer;
 }
 
