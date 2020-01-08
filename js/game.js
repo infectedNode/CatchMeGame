@@ -109,7 +109,7 @@ $('.result .card .buttons .block .retry').click(function(){
 });
 
 $('.result .card .buttons .block .quit').click(function(){
-    let url = "/index.html";
+    let url = "index.html";
     window.location.href = url; 
 });
 
