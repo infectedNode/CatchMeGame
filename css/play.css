@@ -48,7 +48,7 @@
 }
 
 .play .row .block.wrong {
-    background-color: rgb(155, 38, 38);
+    background-color: rgb(128, 44, 44);
 }
 
 @media(max-width: 450px) {

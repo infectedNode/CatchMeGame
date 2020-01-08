@@ -37,29 +37,29 @@ function gameStart() {
             timeoutBlockID = id;
 
             // setting Timeout according to score
-            if(score == 1) {
+            if(score < 2) {
                 timeoutID = setTimeout(timeout, 4000);   //timelimit = 4sec when score = 1 
                 progress(4000);
-            } else if(score == 2) {
+            } else if(score < 3) {
                 timeoutID = setTimeout(timeout, 3000);   //timelimit = 3sec when score = 2
                 progress(3000);
-            } else if(score == 3) {
-                timeoutID = setTimeout(timeout, 2000);   //timelimit = 2sec when score = 3
+            } else if(score < 6) {
+                timeoutID = setTimeout(timeout, 2000);   //timelimit = 2sec when score = 3, 4, 5
                 progress(2000);
-            } else if(score > 3 && score <= 8) {
-                timeoutID = setTimeout(timeout, 1000);   //timelimit = 1sec when score = 4, 5, 6, 7, 8
+            } else if(score < 11) {
+                timeoutID = setTimeout(timeout, 1000);   //timelimit = 1sec when score = 6, 7, 8, 9, 10
                 progress(1000);
-            } else if(score > 8 && score <= 10) {
-                timeoutID = setTimeout(timeout, 800);   //timelimit = 0.8sec when score = 9, 10
+            } else if(score < 16) {
+                timeoutID = setTimeout(timeout, 800);   //timelimit = 0.8sec when score = 11, 12, 13, 14, 15
                 progress(800);
-            } else if(score > 10 && score <= 12) {
-                timeoutID = setTimeout(timeout, 700);   //timelimit = 0.7sec when score = 11, 12
+            } else if(score < 25) {
+                timeoutID = setTimeout(timeout, 700);   //timelimit = 0.7sec when score = from 16 to 24
                 progress(700);
-            } else if(score > 12 && score <= 14) {
-                timeoutID = setTimeout(timeout, 600);   //timelimit = 0.6sec when score = 13, 14
+            } else if(score < 50) {
+                timeoutID = setTimeout(timeout, 600);   //timelimit = 0.6sec when score = from 25 to 49
                 progress(600);
-            } else if(score > 14) {
-                timeoutID = setTimeout(timeout, 500);   //timelimit = 0.5sec when score > 14 (15,16...)
+            } else {
+                timeoutID = setTimeout(timeout, 500);   //timelimit = 0.5sec when score = greater than 49
                 progress(500);
             }
         } else {
@@ -140,7 +140,3 @@ $(document).ready(function(){
     // document.body.requestFullscreen();
     countdown();
 });
-
-
-   
- 
