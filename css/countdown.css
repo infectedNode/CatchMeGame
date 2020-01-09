@@ -20,8 +20,14 @@
     text-align: center;
     line-height: 100vh;
     font-size: 8rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
     color: rgb(32, 32, 32);
-    text-shadow: 0 3px 6px rgb(36, 36, 36);
+    text-shadow: 0 3px 6px rgb(61, 61, 61);
     backface-visibility: hidden;
+}
+
+@media(max-width: 450px) {
+    .countdown .count {
+        line-height: 90vh;
+    }
 }

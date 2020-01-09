@@ -1,7 +1,8 @@
 var score = 0;
 
-function showResult(result) {
+function showResult(result, msg) {
     $('.result .card .score').html(`Score : ${result}`);
+    $('.result .card .message').html(`${msg}`);
     $('.result').addClass('show');
 }
 
@@ -63,7 +64,7 @@ function gameStart() {
                 progress(500);
             }
         } else {
-            showResult(score);
+            showResult(score, 'Catch Missed!');
             $(`.play .row #${blockID}`).addClass('wrong');
             console.log('NOT Matched !  GAME OVER...');
         }
@@ -71,7 +72,7 @@ function gameStart() {
 
     //End Game when Timeout
     function timeout() {
-        showResult(score);
+        showResult(score, 'TimeOut!');
         $('.play .row .block').removeClass('correct');
         $(`.play .row #${timeoutBlockID}`).addClass('wrong');
         console.log('TIME OUT !  GAME OVER...');
