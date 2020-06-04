@@ -132,7 +132,7 @@ $('.result .card .buttons .block .retry').click(function(){
 });
 
 $('.result .card .buttons .block .quit').click(function(){
-    let url = "index.html";
+    let url = "/";
     window.location.href = url; 
 });
 
